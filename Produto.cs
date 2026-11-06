@@ -10,5 +10,29 @@ namespace ClassesObjetos
         {
             Console.WriteLine($"{Nome} - {Preco:C}");
         }
+
+        public void AlterarPreco(decimal novoPreco)
+        {
+            if (novoPreco > 0)
+            {
+                Preco = novoPreco;
+            }
+            else
+            {
+                Console.WriteLine("Valor inválido.");
+            }
+        }
+
+        public Produto() // O método contrutor sempre terá o mesmo nome da classe
+        {
+            Nome = "Não informado";
+            Preco = 0m;
+        }
+
+        public Produto(string nome, decimal valor)
+        {
+            Nome = nome;
+            Preco = valor;
+        }
     }
 }
